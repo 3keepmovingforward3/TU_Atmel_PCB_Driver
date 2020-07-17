@@ -184,5 +184,4 @@ void OLED_VerticalGraph(uint8_t var_barGraphNumber_u8, uint8_t var_percentageVal
 void OLED_HorizontalGraph(uint8_t var_barGraphNumber_u8, uint8_t var_percentageValue_u8);
 /**************************************************************************************************/
 
-
 #endif /* SSD1306_h */
