@@ -1,5 +1,5 @@
 /*
- * avr_i2c.c
+ * i2c.c
  *
  * Created: 7/15/2020 11:35:10 AM
  *  Author: Benjamin Blouin
@@ -9,13 +9,13 @@
 
 // Two-Wire(TWI) Register Macro
 //
-#define TWBR TWBR0 //TWI Bit Rate Register
-#define TWCR TWCR0 //TWI
-#define TWDR TWDR0
-#define TWSR TWSR0
-#define TWAR TWAR0
+#define TWBR TWBR0 // TWI Bit Rate Register
+#define TWCR TWCR0 // TWI Control Register
+#define TWDR TWDR0 // TWI Data Register
+#define TWSR TWSR0 // TWI Start Register
+#define TWAR TWAR0 // TWI Ack Register
 
-#include "avr_i2c.h"
+#include "i2c.h"
 
 /*
 	Compiler Configuration
