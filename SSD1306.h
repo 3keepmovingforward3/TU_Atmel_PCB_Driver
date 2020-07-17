@@ -17,24 +17,20 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-/***************************************************************************************************
- Macros to find the mod of a number
- ****************************************************************************************************/
+// Macros to find the mod of a number
+//
 #define util_GetMod8(dividend,divisor)  (uint8_t) (dividend - (divisor * (uint8_t) (dividend/divisor)))
 #define util_GetMod16(dividend,divisor) (uint16_t)(dividend - (divisor * (uint16_t)(dividend/divisor)))
 #define util_GetMod32(dividend,divisor) (uint32_t)(dividend - (divisor * (uint32_t)(dividend/divisor)))
-/***************************************************************************************************/
 
-/***************************************************************************************************
- Macros for Dec2Ascii,Hec2Ascii and Acsii2Hex conversion
- *****************************************************************************************************/
+// Macros for Dec2Ascii,Hec2Ascii and Acsii2Hex conversion
+//
 #define util_Dec2Ascii(Dec)     ((Dec)+0x30)
 #define util_Ascii2Dec(Asc)     ((Asc)-0x30)
 #define util_Hex2Ascii(Hex)           (((Hex)>0x09) ? ((Hex) + 0x37): ((Hex) + 0x30))
 #define util_Ascii2Hex(Asc)           (((Asc)>0x39) ? ((Asc) - 0x37): ((Asc) - 0x30))
 #define util_GetBitStatus(x,bit)      (((x)&(util_GetBitMask(bit)))!=0u)
 #define util_GetBitMask(bit)          (1<<(bit))
-/***************************************************************************************************/
 
 /******************************************************************************
  standard defs
